@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Attendance Management System — Dashboard">
+    <title>Attendance Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Toast container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Mobile sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Modal overlay (reusable) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">📋</div>
+                <h1>AttendanceHQ</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main</div>
+                    <a class="nav-item active" data-page="dashboard" href="#dashboard">
+                        <span class="nav-icon">📊</span> Dashboard
+                    </a>
+                    <a class="nav-item" data-page="students" href="#students">
+                        <span class="nav-icon">🎓</span> Students
+                    </a>
+                    <a class="nav-item" data-page="attendance" href="#attendance">
+                        <span class="nav-icon">✅</span> Mark Attendance
+                    </a>
+                    <a class="nav-item" data-page="records" href="#records">
+                        <span class="nav-icon">📑</span> Attendance Records
+                    </a>
+                    <a class="nav-item" data-page="analytics" href="#analytics">
+                        <span class="nav-icon">📈</span> Analytics
+                    </a>
+                    <a class="nav-item" data-page="tickets" href="#tickets">
+                        <span class="nav-icon">🎫</span> Tickets
+                    </a>
+                    <a class="nav-item" data-page="leaves" href="#leaves">
+                        <span class="nav-icon">📝</span> Leave Requests
+                    </a>
+                    <a class="nav-item" data-page="documents" href="#documents">
+                        <span class="nav-icon">📂</span> Documents
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Account</div>
+                    <a class="nav-item danger" id="logoutBtn">
+                        <span class="nav-icon">🚪</span> Logout
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Area -->
+        <div class="main-area">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="hamburger" id="hamburger">☰</button>
+                    <h2 id="pageTitle">Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <span class="date-display" id="dateDisplay"></span>
+                    <span class="badge" id="roleBadge"></span>
+                </div>
+            </header>
+
+            <!-- Dynamic Content -->
+            <main class="content" id="content">
+                <div class="loading">
+                    <div class="spinner"></div><span>Loading…</span>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JS Modules -->
+    <script src="js/api.js?v=3"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/students.js"></script>
+    <script src="js/attendance.js"></script>
+    <script src="js/records.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/tickets.js"></script>
+    <script src="js/leaves.js"></script>
+    <script src="js/documents.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database
+*.db
+backend/attendance.db
+
+# Uploads directory
+backend/uploads/
+!backend/uploads/.gitkeep
+
+# Environments & IDEs
+.env
+.venv/
+env/
+venv/
+ENV/
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
